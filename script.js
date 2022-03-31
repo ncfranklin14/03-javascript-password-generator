@@ -1,17 +1,42 @@
 function generatePassword(){
     //TODO: your code goes here
 
-var upperCase = ["A", "B", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var number = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var special = ["!", "#", "$", "%", "&", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@"]
+var upperCaseList = ["A", "B", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowerCaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberList = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specialList = ["!", "#", "$", "%", "&", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@"]
 
 // asks for password legnth
-var passLegnth = window.prompt("Choose legnth of password from 8-128 characters")
+var passLegnth = window.prompt("Choose legnth of password from 8-128 characters");
 
 // asks if password includes lowercase, uppercase, numeric, and/or special characters
 
-// make an array that has the parameters they chose
+var lowerCase = confirm("Include lowercase letters in your password?")
+var upperCase = confirm("Include uppercase letters in your password?")
+var numeric = confirm("Include numbers in your password?")
+var special = confirm("Include special characters in your password?")
+
+// make an array that has the parameters they chose and only those parameters
+
+var userChoice = []; 
+
+if (numeric === true) {
+  userChoice.push(...numberList);
+}
+
+if (lowerCase === true) {
+  userChoice.push(...lowerCaseList);
+}
+
+if (upperCase === true) {
+  userChoice.push(...upperCaseList);
+}
+
+if (special === true) {
+  userChoice.push(...specialList);
+}
+
+
 
 // function to pull a random item out of an array 
 
@@ -20,7 +45,7 @@ var passLegnth = window.prompt("Choose legnth of password from 8-128 characters"
 
 
 
-    return "password"
+    return "password";
   }
   
   
