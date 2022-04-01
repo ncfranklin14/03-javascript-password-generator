@@ -9,8 +9,6 @@ var numberList = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialList = ["!", "#", "$", "%", "&", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@"]
 var finalPass = [];
 
-// grab text output field (slector)
-
 // asks for password legnth
 var passLegnth = window.prompt("Choose legnth of password from 8-128 characters");
 
